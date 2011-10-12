@@ -1,0 +1,588 @@
+/* $Id$ */
+
+/* techcommons.css (Drupal 6) - 9/13/11 */
+
+/** common **/
+html, body, table th, table td {color: #222;}
+h1, h2, h3, h4, h5, h6 {color: #111;}
+
+/** topwrapper **/
+#topwrapper {padding: 5px 0px 0px; margin: 5px auto 0px;}
+
+/** body **/
+body {background: #777;}
+#page {}
+#page-inner {background-color: #FFF; margin: 5px auto 0px; clear: both;}
+#skip-to-main a, #skip-to-main a:hover, #skip-to-main a:visited {
+    position: absolute; left: 0; top: -500px; width: 1px; height: 1px; overflow: hidden;
+}
+#skip-to-main a:active, #skip-to-main a:focus {position: static; width: auto; height: auto;}
+.accessnote  {position: absolute; left: 0; top: -500px; width: 1px; height: 1px; overflow: hidden;}
+  
+/** header **/
+#header {background: #FFF; border-bottom: 1px solid #CCC;}
+#header-inner {}
+#header-print {display: none;}
+#logo-title {float: left;} /* Wrapper for logo, website name, and slogan */
+#crumbbar {clear: both; background: #FFF; color: #333; min-height: 16px;}
+#banner-top {clear: both; background: #CCC url(images/background-light.gif) repeat; border-bottom: 1px solid #333; min-height: 5px;} 
+#banner {padding: 2px 0 1px 0;}
+#banner-bottom {clear: both; background: #CCC url(images/background-light.gif) repeat; border-top: 1px solid #333; min-height: 5px;} 
+#breadcrumb {background: #FFF; font-size: .9em; padding: 5px 0 0 20px;}
+#breadcrumb a:link, #breadcrumb a:visited {color: #36C; text-decoration: none;}
+#breadcrumb a:hover, #breadcrumb a:active {color: #ed1a09; text-decoration: underline;}
+.front #breadcrumb a:hover {cursor: none;}
+
+#logo {margin: 0px 10px 0 0px; padding: 0;} /* Wrapper for logo */
+#logo-image {} /* The actual logo image */
+
+h1#site-name, div#site-name {margin-bottom: 0.1em; padding: 10px 0px 0px 20px; color: #333333; font-size: 2.5em;} /* Uncheck if site name is in logo */
+#site-name span.alt-color {color: #CCC;}
+#site-name a:link, #site-name a:visited {text-decoration: none; color: #333; text-transform: lowercase;}
+#site-name a:hover {}
+#site-slogan {background-color: #FFF; padding: 0px 0px 10px 23px; color: #C8C8C8; font-size: 1em; font-style: italic; letter-spacing: 3px;} /* The slogan (or tagline) of a website */
+#header-blocks {} /* Wrapper for any blocks placed in the header region */
+
+/** search **/
+#search-box {float: right; margin: 20px 20px 0 0;}  
+#search-form #edit-keys-header {width: 200px;} /*Size of Apache Solr search block */
+#edit-search-theme-form-1-wrapper label {display: none;} /* Alternative: Label that says "Search this site:" - can be hidden with Custom Search module */
+.search-snippet {font-size: .8em;}
+.search-url {color: green; font-style: italic;}
+
+/** apache solr **/
+.apachesolr-showhide {padding-left: 12px;}
+#block-apachesolr-mlt-001 {}
+.page-search-apachesolr-search .tabs {display:none;}
+.block-apachesolr_search ul li {padding: 3px 3px !important;} /* Extra padding for filtered search results */
+
+/** search-result.tpl.php **/
+.apachesolr_search-results dt {border-bottom: 1px solid #DDD; padding: 10px 0 0 0; clear: both;}
+.apachesolr_search-results dd {margin: 0;}
+.apachesolr_search-results .search-snippet {width: 80%;} /* Make room for modified line */
+.solr-categories {float: left; font-size: .9em;}
+.label-solr-categories {font-weight: bold;}
+ul.list-solr-categories {list-style-type: none; margin: 0; padding: 0 0 20px 0;}
+li.list-item-solr-categories {}
+.solr-rating {float: right;}
+.solr-rating-count {float: right;}
+.solr-rating .fivestar-widget-static {float: right;}
+.solr-lastupdated {float: right; clear:both; font-size: .8em; font-style: italic;}
+
+/** main (container for everything else) **/
+#main {clear: both; background: #FFF;}
+#main-inner {}
+
+/** tables **/
+tr.even, tr.odd, tbody th {border: 1px solid #CCC;}
+tr.odd, tr.info {background-color: #EEE;}
+tr.even {background-color: #fff;}
+th, td {padding: 0 10px; border: 1px solid #CCC;}
+table p {margin: 0 !important; padding: 0 !important;}
+.views-table td {/*padding: 0;*/} 
+th, thead th, tbody th {background: #CCC; border: 1px solid #666;}
+
+/** links - general **/
+a:link, a:visited {color: #36C; text-decoration: none;}
+a:hover, a:active {color: #ed1a09; text-decoration: underline;}
+#content a:link, #content a:visited {color: #36C; text-decoration: none;}
+#content a:hover, #content a:active {color: #ed1a09; text-decoration: underline;}
+.front #content a:link, .front #content a:visited {color: #36C !important; text-decoration: none !important;}
+.front #content a:hover, .front #content a:active {color: #ed1a09 !important; text-decoration: underline !important;}
+.faq-content a:link, .faq-content  a:visited {text-decoration: none !important;}
+li a:link, li a:visited {color: #36C; text-decoration: none !important;}
+a.underline:link, a.underline:visited {color: #36C; text-decoration: underline !important;}
+a.no-underline:link, a.no-underline:visited {text-decoration: none !important;}
+li a.active {font-weight: bold;} /* The active item in a Drupal menu */
+li.statistics_counter {font-size: .75em;} /* Stats counter - for admin only */
+ul.primary li a {font-weight: normal;} /* Override zen tabs.css */
+ul.links {margin-top: -5px;} /* List of links */
+
+/** active and active-trail links**/
+h2 a.active, h2 a.active-trail {color: #FFF;}
+
+/** panels **/
+.panels-dashboard, .page-admin-build-panels, .page-admin-build-panels-dashboard #content-area {clear: both; min-height: 50em;}
+.panel-pane {padding: 0px 0px 20px;} /* Padding between panel panes */
+.pane-ddblock-1, .pane-quicktabs-2 {margin: 0; padding: 0; border: none !important; background: none !important;}
+.panels-flexible-row {margin: 0; padding: 0;}
+.pane-a-to-z .pane-title {}
+
+/** front page **/
+.front h2 {margin: 0;} /* Override html-elements.css for front page*/
+.front #content form {clear: none;}
+.search-icon {padding: 6px 10px 5px 40px; font-size: 1.25em; background: url(images/search.png) no-repeat left center; float: left;} 
+.browse-icon {padding: 14px 10px 10px 40px; font-size: 1.25em; background: url(images/browse.png) no-repeat left center; float: left; clear: both;} 
+.add-icon {padding: 10px 10px 10px 40px; font-size: 1.25em; background: url(images/add.png) no-repeat left center; float: left; clear: both;} 
+.front #content a.browse-icon:link, .front #content a.add-icon:link, .front #content a.browse-icon:visited, .front #content a.add-icon:visited  {color: #000 !important;}
+.front #content a.browse-icon:hover, .front #content a.add-icon:hover, .front #content a.browse-icon:active, .front #content a.add-icon:active  {color: #ed1a09 !important;}
+
+/** content **/
+
+#mission {background-color: #FFF; padding: 10px 0px 0px 20px; color: #333333; font-size: 1.3em; font-style: italic;} /* The mission statement of the site (displayed on homepage) */
+#content, #content-inner {background-color: #FFF;} 
+#content-top {background-color: #FFF; padding: 15px 2.5em 10px;} /* Wrapper for any blocks placed in the "content top" region */
+#content-header {background-color: #FFF; padding: 15px 20px 0px;} /* Wrapper for title, messages, tabs, and help */
+#content-area {background-color: #FFF; padding: 10px 20px 10px; /*min-height:100px;*/ height: auto !important;} /* Wrapper for the actual page content */
+#content-bottom {background-color: #FFF; padding: 0px 20px 10px;} /* Wrapper for any blocks placed in the "content bottom" region */
+#content form {clear: both;} /* admin interface */
+
+.jumplist li {display: inline; padding: 4px;}
+
+.centered {display: block; margin: 0px auto;}
+.textcentered {padding:5px; text-align:center;} 
+.emphasis {color: #000; font-style: italic; word-spacing: 1px} /* word-spacing needed for IE 6 float drop */
+.thumb-right {float: right; margin: 0;}
+.credits {height: 35em;}
+.credits li {margin: 0 0 0 340px; padding: 10px;}
+.image-left {float: left; padding: 5px 50px 5px 0;}
+.rss {float: right; margin: 0; padding: 0; font-size: .8em;}
+.listpadded {padding-bottom: 1em !important;}
+.listnormal {padding-bottom: 0 !important;}
+.node .submitted {font-size: .85em; font-style: italic;} /* The "posted by" information */
+.node .revised {font-size: .85em; font-style: italic;} /* The "revised by" information */
+
+/** forms **/
+input {font-size: 1em;} /* Input fields for forms */
+input.form-autocomplete {border-top: 2px solid #777; border-left: 2px solid #777; border-bottom: 1px solid #CCC; border-right: 1px solid #CCC;}
+.node-form .form-text, .node-form .form-select {font-size: 1em;}
+.form-item .description {font-size: 0.95em;} /* The descriptive help text (separate from the label) */
+
+/** Add Product Form **/
+.keywords-reference-0 {color: red !important; font-size: .9em;}
+#edit-field-product-details-0-value-wrapper .description {color: red !important; padding: 0 0 10px 0;}
+.group-product-fs-support #edit-field-product-ref-provider-0-nid-nid {/*display: none;*/} /* Hide autocomplete field on product node form - support section */
+.group-product-fs-support .description {float: left; font-size: .9em;}
+
+/** Node Relationships and Modal Frame **/
+.noderelationships-nodereference-buttons-wrapper {display: block; /*padding: 0 0 0 20px;*/}
+.modalframe-page-wrapper {background: #FFF;}
+/* Override noderelationships.node_form.css */
+.noderelationships-nodereference-view-button, .noderelationships-nodereference-view-disabled,
+.noderelationships-nodereference-edit-button, .noderelationships-nodereference-edit-disabled,
+.noderelationships-nodereference-search-button, .noderelationships-nodereference-create-button,
+.noderelationships-nodereference-multi-button {display: block; margin-right: 4px; padding: 0 0 0 20px; width: auto; height: auto; border: none;}
+.noderelationships-nodereference-edit-button {background: #FFF url(images/noderef-sprites-edit.png) no-repeat 0 0;}
+.noderelationships-nodereference-edit-disabled {background: #FFF url(images/noderef-sprites-edit-disabled.png) no-repeat 0 0;}
+.noderelationships-nodereference-search-button {background: #FFF url(images/noderef-sprites-search.png) no-repeat 0 0;}
+.noderelationships-nodereference-create-button {background: #FFF url(images/noderef-sprites-create.png) no-repeat 0 0;}
+.noderelationships-nodereference-view-disabled, .noderelationships-nodereference-view-disabled:hover,
+.noderelationships-nodereference-edit-disabled, .noderelationships-nodereference-edit-disabled:hover {color: #CCC !important; font-style: italic !important; cursor: default; border: none; background-color: #FFF;}
+
+/** Product pages **/
+div.node-type-product .field-label {color: #222; font-size: 1.2em; line-height: 1.2em; padding: 10px 0 15px 0;}
+div.node-type-product .field-items {padding: 5px 0;}
+div.node-type-product ul.links {float: right; clear: both;}
+.node-type-product .view-content ul li, div.node-type-product ul.menu li {border: none !important; list-style-position: inside; list-style-type: disc !important; margin-left: 0; padding: 3px 0;} 
+
+.add-review-link {float: right; clear: both; margin-top: -5px; padding: 10px 4px 10px 0;}
+.revisions-link {float: right; clear: both; margin-top: -20px; padding: 0 4px 0 0;}
+#content .revisions-link a:link, #content .revisions-link a:visited {/*text-decoration: none !important;*/}
+#block-quicktabs-2 div.edit {top: 60px;} /* Move location of edit block link */
+
+/** Products - Contributed modules **/
+ul.links li.flag-abuse_product {padding: 0 10px 10px 0;}
+ul.links li.statistics_counter {display: none;}
+div.fivestar-summary {font-size: .8em; font-style: italic;}  
+#community-tags-form .form-item ul.links {margin: 0;}
+
+/** Flags **/
+ul.links li.flag-abuse_node {/*padding: 0 10px 0 0;*/} /* Remove padding - issue in Safari/Chrome? */
+li a.flag:hover, li a.flag:active {text-decoration: underline !important;}
+.flag-abuse-review {font-size: .85em;}
+.flag-abuse-node a.flag-action, .flag-abuse-node a.flag-processed, .flag-abuse-node a.unflag-action,
+.flag-abuse-review a.flag-action, .flag-abuse-review a.flag-processed, .flag-abuse-review a.unflag-action,
+.flag-abuse-support-team a.flag-action, .flag-abuse-support-team a.flag-processed, .flag-abuse-support-team a.unflag-action
+  {padding: 0 0 0 20px; background: url(images/flag-red-small.png) no-repeat left center;} /* http://www.freeiconsweb.com */
+.flag-message {position: absolute; left: 30px;} /* override default flag.css positioning */
+
+/** Support Team **/
+.red-emphasis {color: red !important;}
+#edit-field-support-team-email-0-email-wrapper {padding: 20px 0;} /* Padding between fields */
+
+/** views in quicktabs **/
+.quicktabs_main {min-height: 125px;} /* Set min height of tabbed content */
+
+/** Overview Tab **/
+.view-product-overview .views-field-edit-node {padding: 10px 0; float: right;} /* Edit Overview */
+.view-product-overview .views-field-value {padding: 10px 0;} /* Average Rating */
+.view-product-overview .views-field-field-product-acquire-url-url {padding: 10px 0; } /* URL */
+.views-field-field-product-acquire-url-url a:link, .views-field-field-product-acquire-url-url a:visited {border: 1px solid #ccc; background: #EEE; color: #36C; padding: 8px 10px;} /* Product Homepage button */ 
+.view-product-overview .views-field-field-product-extended-desc-value {padding-top: 10px; } /* Extended Description */
+.view-product-overview .views-label-field-product-extended-desc-value {font-weight: bold;} /* Label: Extended Description */
+.view-product-overview .views-field-tid {padding: 10px 0 0 0;} /* Category */
+.view-product-overview .views-label-tid {font-weight: bold;} /* Label: Category */
+
+/** Reviews Tab **/
+.view-product-reviews .views-field-value {} /* Stars rating */
+.view-product-reviews .views-field-name {display: inline;} /* Reviewer: name */
+.view-product-reviews .views-label-name {/*font-weight: bold;*/}  /* Label: Reviewer - not used */
+.view-product-reviews .views-field-timestamp {display: inline;} /* Timestamp: F j, Y */
+
+.view-product-reviews .views-field-ops {float: right; clear: both;} /* Flag link */
+.view-product-reviews .views-row {border-bottom: 1px solid #ccc; padding: 10px 0 10px 0;}*/ /* Each review entry */
+
+.view-product-reviews .views-label-value {font-weight: bold;} /* Label: Reviewer's Rating */
+.view-product-reviews .views-field-field-review-review-value {padding: 20px 0 0 20px; clear: both;} /* Review */
+.view-product-reviews .views-label-field-review-review-value {font-weight: bold;} /* Label: Review */
+
+.view-product-reviews .views-field-comment-count {float: left; font-size: .85em; color: #555;} /* Comment count */
+.view-product-reviews .views-label-comment-count {font-weight: bold;} /* Label: Comment Count */
+.view-product-reviews .views-field-comment {padding: 20px 0 0 0;} /* Comments */
+.view-product-reviews .views-label-comment {font-weight: bold;} /* Label: Comments */
+
+/*.view-product-reviews .vud-widget-alternate {padding: 0 10px 0 0;} *//* Vote up-down widget */
+
+.view-product-reviews .views-field-nid {padding: 20px 0 0 0;} /* Comment on review wrapper */
+.view-product-reviews .views-field-nid .field-content {float: left; padding: 0 5px 0 0; font-size: .85em;} /* Comment on review */
+
+.view-product-reviews .thumb-text, .comment .thumb-text {float: left; font-size: .85em; color: #555; padding: 0 0 0 3px;} /* Text: Was this review helpful */
+.view-product-reviews .vud-widget-thumbs .up-score, .comment .vud-widget-thumbs .up-score {float: left; display: inline-block; margin-top: -1px; padding-left: 5px;} /* Thumb - Override clear block */
+.view-product-reviews .up-current-score, .comment .up-current-score {font-size: .85em;} /* Up current score */
+.view-product-reviews .vud-widget-thumbs .up-inactive, .comment .vud-widget-thumbs .up-inactive {float: left; display: inline-block;}
+.view-product-reviews .vud-widget-thumbs .up-active, .comment .vud-widget-thumbs .up-active {float: left; display: inline-block;}
+
+/** Comments on Reviews **/
+.indent0 {margin-left: 0px;}
+.indent1 {margin-left: 25px;}
+.indent2 {margin-left: 50px;}
+.indent3 {margin-left: 75px;}
+.indent4 {margin-left: 100px;}
+.indent5 {margin-left: 125px;}
+.indent0, .indent1, .indent2, .indent3, .indent4, .indent5 {border-top: 1px solid #DBDBDB; font-size: .9em; padding: 5px 0 0 0;}
+.comment .vud-widget-thumbs {clear: both;}
+.comment_delete, .comment_edit, .comment_reply {padding: 0 5px 0 0 !important;}
+#block-quicktabs-2 .comment .content {padding: 0;} /* Product quicktab block - comments */
+.comment .content p {clear: both; padding: 10px 0 0 20px;}
+#block-quicktabs-2 .comment .content p {clear: both; padding: 10px 0 0 20px;} 
+#block-quicktabs-2 .comment .links {padding: 0 0 0 10px;} 
+.comment-review {padding: 10px 0 0 0;}
+.comment-review fieldset {margin: 0; padding: 0 0 0 15px;}
+.view-comments-review fieldset {margin: 0; padding: 0 0 0 15px;}
+.view-comments-review fieldset.collapsed {border:none;}
+.view-comments-review fieldset legend {font-size: .85em;}
+legend.comment-review-link {font-size: .85em;}
+.comment-review fieldset.collapsed {border: none;}
+.login-comment-review {font-size: .85em;}
+.field-review-comments {padding: 0;}
+.field-review-comments .views-row {border:none; padding: 10px 0 10px 0;}*/ /* Each review entry */
+
+/** Details Tab **/
+.view-product-details .views-field-edit-node {padding: 10px 0; float: right;} /* Edit Details */
+.view-product-details .views-label-field-product-details-value {font-weight: bold;} /* Label: Product Details */
+
+/** Support Tab **/
+.view-product-support .edit-support-team {padding: 10px 0; float: right;} /* Edit Support */
+.view-product-support .view-revisions-support-team {float: right; clear:both;} /* View Revisions for this Support Team */
+.view-product-support .views-label-field-product-ref-provider-nid {font-weight: bold; } /* Label: Support Team Contact Information */
+.view-product-support .views-label-field-support-team-contact-value {font-weight: bold;} /* 
+/* .add-support-team {float: right; margin-top: -30px;} */  /* Not used */
+/* .empty-support-team-text {} */ /* Not used */
+
+/** Products View - Admin use **/
+.view-product th, .view-product td {color: 0; font-size: .9em;}
+.view-product td.active {background: none;}
+.view-product .views-field {min-width: 100px;}
+
+/** Admin **/
+.help {margin: 1em 0; clear: both;} /* Help text on a page */ /* Admin theming after tab hiding for products */
+table.sticky-header {position: relative !important;} /* Fix positioning of table under tabs - see admin/user/cas/attributes/cas */
+
+    /** From Zen - Not edited **/
+  .breadcrumb {padding-bottom: 0;} /* Undo system.css */ /* The path to the current page in the form of a list of links */
+  h1.title {margin: 0; border-bottom: 1px solid #ccc;}
+  h2.title,  /* Block title or the title of a piece of content when it is given in a list of content */
+  h3.title {margin: 0; border-bottom: 1px solid #ccc;} /* Comment title */
+  div.messages {} /* Important messages (status, warning, and error) for the user */
+  div.status {} /* Normal priority messages */
+  div.warning, tr.warning /* Medium priority messages */
+    {/* border: 1px solid #f0c020; */} /* Drupal core uses: 1px solid #f0c020 */
+  div.error, tr.error {} /* High priority messages. See also the .error declaration below. */
+  /*div.tabs {} */  /* See also the tabs.css file. */
+  .more-help-link {font-size: 0.85em; text-align: right;} /* Link to more help */
+  ul.links.inline {margin: 0; display: inline;}
+  ul.links li  {display: inline; list-style-type: none; padding: 0;}
+  .pager {clear: both; margin: 1em 0; text-align: center;} /* A list of page numbers when more than 1 page of content is available */
+  .pager a, .pager strong.pager-current {padding: 0.5em;}
+  .feed-icons {margin: 1em 0;}  /* The links to the RSS or Atom feeds for the current list of content */
+
+/** blocks -- adopted from Nitobe theme: http://drupal.org/project/nitobe */
+.block { margin-bottom: 1.5em; }
+div.block h2, div.block-block h2,div.block h3, div.block-block h3 {
+  border-bottom: 1px solid ccc; color: #555; font-size: 1.5em; font-weight: normal; margin: 0;
+  margin-bottom: 6px; margin-top: 0.5em; /*text-transform: lowercase;*/}
+.block ul, .block ul.menu {list-style-position: inside; list-style-type: none; margin: 0; padding: 0;}
+.block ul li, .block ul.menu li {border-bottom: 1px solid #f2f2f2; list-style-position: inside; list-style-type: none; margin-left: 0; padding: 3px 0;}
+.block ul.menu li ul.menu li {margin-left: 1em;}
+.block ul.menu li ul.menu li.last, .block ul.menu li ul.menu li ul.menu li.last {border: 0;}
+
+/** block - additional */
+#sidebar-right .block-inner {padding: 0 0 20px 0;} /* Additional wrapper for block */
+#block-quicktabs-2 .content {padding: 10px 0 0 0;} /* Product quicktab block */
+.block-community_tags ul li {padding: 0 5px 0 0; border-bottom: none;} /* product tags */
+.block h2.title {padding: 10px 0 0 0;} /* Block H2 title */
+
+/** Product page - block-editing - override Zen **/
+div#block-quicktabs-2 {position: static;}
+div#block-quicktabs-2 div.edit {/*display: none;*/ position: absolute; top: 200px; 
+    z-index: 40; border: 1px solid #eee; padding: 0 2px; margin: 0 25px 0 0; font-size: 0.75em; background-color: #fff;}
+
+/** navbar **/
+  #navbar {}
+  #navbar-inner {}
+
+/** Primary links **/
+#primary {margin: 20px;} /* Primary links */
+#primary ul {list-style: none; padding: 0; margin: 0; background: url("images/background-light.gif") repeat scroll 0 0 #CCCCCC; border-bottom: 1px solid #333;
+  color: #333; float: left; width: 100%; /*font: bold .8em;*/}
+#primary ul li {display: inline; line-height: 2.2em;}
+#primary ul li a {float: left; padding: 0 20px; color: #333; font-weight: bold; text-decoration: none; /*border-bottom: 1px solid #CCC;*/ /*height: 25px; */
+/*text-align:center; max-width: 102px;*/}
+#primary ul li a:hover {background: url("images/background-medium.gif") repeat scroll 0 0 #333; color: #000;}
+#primary ul li a:active {background: url("images/background-dark.gif") repeat scroll 0 0 #333; color: #FFF;}
+#primary ul li h2 {font-size: 1em; margin: 0 !important;}
+#primary ul li.active-trail a {background: url("images/background-dark.gif") repeat scroll 0 0 #333; color: #FFF;} 
+
+/** Secondary links **/
+#secondary ul {float: right; color: #FFF; font-size: .9em; margin-left: 5px;}
+#secondary ul li {display: inline;}
+#secondary ul li a, #secondary ul li span {padding: 0 1em; color: #FFF; text-decoration: none; float: left; border-right: 1px solid #CCC;}
+#secondary ul li a:hover {text-decoration: underline !important; color: #FFF;}
+#secondary ul li.last a {border: none;}
+#secondary ul li.active-trail a {color: #FFF; font-weight: normal; text-decoration: underline !important;}
+
+/** sidebar-left **/
+#sidebar-left {background-color: #FFF; padding: 0 0 0 10px; font-size: .9em;}
+#sidebar-left h2 {background-color: #FFF; color: #333; margin: 0px; /*padding: 2px 2px 2px 8px;*/}
+#sidebar-left-inner {background-color: #FFF; padding-bottom: 10px; /*border-right: solid 1px #333;*/}
+#sidebar-left .block-inner {padding: 20px 0 0 0;}
+
+/** sidebar-right **/
+#sidebar-right {background-color: #FFF; padding: 0px; font-size: .9em;}
+#sidebar-right h2 {background-color: #FFF; color: #333; margin: 0px; /*padding: 2px 2px 2px 8px;*/}
+#sidebar-right-inner {}
+
+/** footer **/
+#footer {background: #FFF; border-top: 1px solid #ccc; text-align: center; font-size: 0.75em; vertical-align: bottom; 
+display: block; overflow: visible; clear: both; position: relative; padding: 5px 0;}
+#footer-inner {}
+#footer ul {display: inline; margin: 0; padding: 0;}
+#footer ul li {background: transparent none repeat; border-left: 1px solid #CCC; border-bottom: none; display: inline; padding: 0 5px 0 9px;}
+#footer ul.menu {border: none;}
+#footer ul li.first {border: none;}
+#footer ul li a {border: none; display: inline; padding: 0;}
+#footer ul li a:hover, #footer ul li a:active {text-decoration: underline; background: none;}
+#footer-message {color: #333; font-size: .95em;} /* Wrapper for the footer message from Drupal's "Site information" */
+#footer .block {margin-bottom: 0;}                 
+
+/** closure **/
+  #closure-blocks {} /* Wrapper for any blocks placed in the closure region */
+
+/** menus **/
+.front ul.menu {padding: 0; margin: 0;}
+.front ul.menu li a:hover, .front ul.menu li a:active {background: none !important; color: #36C; text-decoration: none;}
+.front ul.menu li, .front ul.menu li.leaf, .front ul.menu li.expanded, .front ul.menu li.collapsed {
+  list-style: none; list-style-image: none; list-style-type: none; margin: 0; padding: 0;}
+.front ul.menu li a {display: block; font-size: 1em; padding: 0.25em 1.5em; border-bottom: solid 1px #eee;}
+
+/** sidebar menus **/
+ul.menu {margin: 0; padding: 0;}
+ul.menu li {display: inline; list-style: none; margin: 0; padding: 0;}
+ul.menu li a {display: block; padding: 5px 0px 5px 20px; border-bottom: solid 1px #B3BED5;}
+ul.menu li a:hover, ul.menu li a:active {background: #B3BED5; color: #36C; text-decoration: none;}
+ul.menu li a.active {font-weight: bold; color: #36C;}
+ul.menu li.expanded a.active-trail {background: url(images/menu-expanded.png) no-repeat 5px 10px;}
+ul.menu li.leaf a.active-trail {background: url(images/menu-leaf.png) no-repeat 5px 10px;}
+ul.menu li.expanded a.active-trail:hover, ul.menu li.expanded a.active-trail:active {background: #B3BED5 url(images/menu-expanded.png) no-repeat 5px 10px;}
+ul.menu li.leaf a.active-trail:hover, ul.menu li.leaf a.active-trail:active {background: #B3BED5 url(images/menu-leaf.png) no-repeat 5px 10px;}
+
+/** sidebar submenu 1 **/
+ul.menu ul {background: #ECF2FA;}
+ul.menu ul li a {display: block; padding: 5px 0px 5px 35px; border-bottom: dotted 1px #B3BED5;}
+ul.menu ul li.expanded a.active-trail {background: url(images/menu-expanded.png) no-repeat 20px 10px;}
+ul.menu ul li.leaf a.active-trail {background: url(images/menu-leaf.png) no-repeat 20px 10px;}
+ul.menu ul li.expanded a.active-trail:hover, ul.menu ul li.expanded a.active-trail:active {background: #B3BED5 url(images/menu-expanded.png) no-repeat 20px 10px;}
+ul.menu ul li.leaf a.active-trail:hover, ul.menu ul li.leaf a.active-trail:active {background: #B3BED5 url(images/menu-leaf.png) no-repeat 20px 10px;}
+
+/** sidebar submenu 2 **/
+ul.menu ul ul {background: #FFF; font-size: 0.9em;}
+ul.menu ul ul li a {display: block; padding: 5px 0px 5px 45px; border-bottom: dotted 1px #B3BED5;}
+ul.menu ul ul li.expanded a.active-trail {background: url(images/menu-expanded.png) no-repeat 35px 10px;}
+ul.menu ul ul li.leaf a.active-trail {background: url(images/menu-leaf.png) no-repeat 35px 10px;}
+ul.menu ul ul li.expanded a.active-trail:hover, ul.menu ul ul li.expanded a.active-trail:active {background: #B3BED5 url(images/menu-expanded.png) no-repeat 35px 10px;}
+ul.menu ul ul li.leaf a.active-trail:hover, ul.menu ul li.leaf a.active-trail:active {background: #B3BED5 url(images/menu-leaf.png) no-repeat 35px 10px;}
+
+/** sidebar submenu 3 **/
+ul.menu ul ul ul {background: #FFF; font-size: 0.9em;}
+ul.menu ul ul ul li a {display: block; padding: 5px 0px 5px 55px; border-bottom: dotted 1px #B3BED5;}
+ul.menu ul ul ul li.expanded a.active-trail {background: url(images/menu-expanded.png) no-repeat 45px 10px;}
+ul.menu ul ul ul li.leaf a.active-trail {background: url(images/menu-leaf.png) no-repeat 45px 10px;}
+ul.menu ul ul ul li.expanded a.active-trail:hover, ul.menu ul ul ul li.expanded a.active-trail:active {background: #B3BED5 url(images/menu-expanded.png) no-repeat 45px 10px;}
+ul.menu ul ul ul li.leaf a.active-trail:hover, ul.menu ul ul li.leaf a.active-trail:active {background: #B3BED5 url(images/menu-leaf.png) no-repeat 45px 10px;}
+
+/** sidebar submenu 4 **/
+ul.menu ul ul ul ul {background: #FFF; font-size: 0.9em;}
+ul.menu ul ul ul ul li a {display: block; padding: 5px 0px 5px 65px; border-bottom: dotted 1px #B3BED5;}
+ul.menu ul ul ul ul li.expanded a.active-trail {background: url(images/menu-expanded.png) no-repeat 55px 10px;}
+ul.menu ul ul ul ul li.leaf a.active-trail {background: url(images/menu-leaf.png) no-repeat 55px 10px;}
+ul.menu ul ul ul ul li.expanded a.active-trail:hover, ul.menu ul ul ul ul li.expanded a.active-trail:active {background: #B3BED5 url(images/menu-expanded.png) no-repeat 55px 10px;}
+ul.menu ul ul ul ul li.leaf a.active-trail:hover, ul.menu ul ul ul li.leaf a.active-trail:active {background: #B3BED5 url(images/menu-leaf.png) no-repeat 55px 10px;}
+
+
+/** ----- OTHER: USE AS NEEDED ----- **/
+
+/** Drupal nodes **/
+  .node {} /* Node wrapper */
+  .node-inner {} /* Additional wrapper for node */
+  .sticky {} /* A sticky node (displayed before others in a list) */
+  .node-unpublished /* Unpublished nodes */
+    {/* background-color: #fff4f4; */} /* Drupal core uses a #fff4f4 background */
+
+  .node-unpublished div.unpublished, /* The word "Unpublished" displayed beneath the content. */
+  .comment-unpublished div.unpublished {height: 0; overflow: visible; color: #d8d8d8;
+    font-size: 75px; line-height: 1; font-family: Impact, "Arial Narrow", Helvetica, sans-serif;
+    font-weight: bold; text-transform: uppercase; text-align: center;
+    word-wrap: break-word; /* A very nice CSS3 property */
+  }
+
+  .node-mine {} /* A node created by the current user */
+  .node-teaser {} /* A node displayed as teaser */
+
+  /* All nodes are given a node-type-FOO class that describes the type of
+   * content that it is. If you create a new content type called
+   * "my-custom-type", it will receive a "node-type-my-custom-type" class.
+   */
+  .node-type-page {} /* Page content node */
+  .node-type-story {} /* Story content node */
+  .node h2.title {} /* Node title */
+  .marker {color: #c00;} /* "New" or "Updated" marker for content that is new or updated for the current user */
+  .node .picture {} /* The picture of the node author */
+  .node.node-unpublished .picture,
+  .comment.comment-unpublished .picture {position: relative;} /* Otherwise floated pictures will appear below the "Unpublished" text. */
+  .node .meta {} /* Wrapper for submitted and terms data */
+  .node .terms {} /* Node terms (taxonomy) */
+  .node .content {} /* Node's content wrapper */
+  .node ul.links {} /* Node links. See also the ul.links declaration above. */
+  .preview .node  /* Preview of the content before submitting new or updated content */
+    {/* background-color: #ffffea; */} /* Drupal core uses a #ffffea background */
+
+/** Drupal comments **/
+  #comments {margin: 1em 0;} /* Wrapper for the list of comments and its title */
+  #comments-title {} /* Heading for the list of comments */
+  .comment {} /* Wrapper for a single comment */
+  .comment-inner {} /* Additional wrapper for a single comment */
+  .comment-preview {} /* Preview of the comment before submitting new or updated comment */
+  .comment.new {} /* A new comment since the user last viewed the page. */
+  .comment.odd {} /* An odd-numbered comment in the list of comments */
+  .comment.even {} /* An even-numbered comment in the list of comments */
+  .comment.first {} /* The first comment in the list of comments */
+  .comment.last {} /* The last comment in the list of comments */
+  .comment-unpublished /* Unpublished comments */
+    {/* background-color: #fff4f4; */} /* Drupal core uses a #fff4f4 background */
+  .comment-unpublished div.unpublished {} /* The word "Unpublished" displayed beneath the content. See also the div.unpublished declaration in the node section above. */
+  .comment-published {} /* Published comments */
+  .comment-by-anon {} /* A comment created by an anonymous user */
+  .comment-by-author {} /* A comment created by the node's author */
+  .comment-mine {} /* A comment created by the current user */
+  .comment h3.title {} /* Comment title */
+  .new {color: #c00;} /* "New" marker for comments that are new for the current user */
+  .comment .picture {} /* The picture of the comment author */
+  .comment .submitted {} /* The "posted by" information */
+  .comment .content {} /* Comment's content wrapper */
+  .comment .user-signature {} /* The user's signature */
+  .comment ul.links {margin: 1em 0;} /* Comment links. See also the ul.links declaration above. */
+  .preview .comment /* Preview of the comment before submitting new or updated comment */
+.indented {margin-left: 25px;} /* Default Drupal - Nested comments are indented */
+    {/* background-color: #ffffea; */} /* Drupal core uses a #ffffea background */
+
+/** Drupal blocks **/
+  .block {margin-bottom: 1em;} /* Block wrapper */
+  .block.region-odd {} /* Zebra striping for each block in the region */
+  .block.region-even {} /* Zebra striping for each block in the region */
+  .block.odd {} /* Zebra striping independent of each region */
+  .block.even {} /* Zebra striping independent of each region */
+  .region-count-1 {} /* Incremental count for each block in the region */
+  .count-1 {} /* Incremental count independent of each region */
+  .block-inner {} /* Additional wrapper for block */
+
+  #block-aggregator-category-1 {} /* Block for the latest news items in the first category */
+  #block-aggregator-feed-1 {} /* Block for the latest news items in the first feed */
+  #block-block-1 {} /* First administrator-defined block */
+  #block-blog-0 {} /* "Recent blog posts" block */
+  #block-book-0 {} /* "Book navigation" block for the current book's table of contents */
+  #block-comment-0 {} /* "Recent comments" block */
+  #block-forum-0 {} /* "Active forum topics" block */
+  #block-forum-1 {} /* "New forum topics" block */
+  #block-menu-primary-links {} /* "Primary links" block */
+  #block-menu-secondary-links {} /* "Secondary links" block */
+  #block-node-0 {} /* "Syndicate" block for primary RSS feed */
+  #block-poll-0 {} /* "Most recent poll" block */
+  #block-profile-0 {} /* "Author information" block for the profile of the page's author */
+  #block-search-0 {} /* "Search form" block */
+  #block-statistics-0 {} /* "Popular content" block */
+  #block-user-0 {} /* "User login form" block */
+  #block-user-1 {} /* "Navigation" block for Drupal navigation menu */
+  #block-user-2 {} /* "Who's new" block for a list of the newest users */
+  #block-user-3 {} /* "Who's online" block for a list of the online users */
+
+/** Drupal boxes **/
+  /* Wrapper for Comment form, Comment viewing options, Menu admin, and
+   * Search results.
+   */
+  .box {} /* Wrapper for box */
+  .box-inner {} /* Additional wrapper for box */
+  .box h2.title {} /* Box title */
+  .box .content {} /* Box's content wrapper */
+
+/** Miscellaneous Drupal styles **/
+  .error /* Errors that are separate from div.messages status messages (see above.) */
+    {/* color: #e55; */} /* Drupal core uses a #e55 background */
+
+  .warning /* Warnings that are separate from div.messages status messages (see above.) */
+    {/* color: #e09010; */} /* Drupal core uses a #e09010 background */
+  
+  .more-link {text-align: right;} /* Aggregator, blog, and forum more link */
+  #user-login-form {text-align: left;} /* Drupal's default login form */
+
+/** Drupal forms **/
+  .form-item, /* Wrapper for a form element (or group of form elements) and its label */
+  .form-checkboxes, .form-radios {margin: 1em 0;}
+
+  .form-item input.error, /* Highlight the form elements that caused a form submission error */
+  .form-item textarea.error, .form-item select.error {border: 2px solid #c00;}
+
+  .form-item label {display: block; font-weight: bold;} /* The label for a form element */
+  .form-item label.option {display: inline; font-weight: normal;} /* The label for a radio button or checkbox */
+  .form-required {color: #c00;} /* The part of the label that indicates a required field */
+  .form-checkboxes .form-item, /* Pack groups of checkboxes and radio buttons closer together */
+  .form-radios .form-item {margin: 0.4em 0;}
+  .form-submit {} /* The submit button */
+  .container-inline div, .container-inline label {display: inline;} /* Inline labels and form divs */
+  .tips {margin: 0; padding: 0; font-size: 0.9em;} /* Tips for Drupal's input formats */
+
+/** OpenID **/
+  /* The default styling for the OpenID login link seems to assume Garland's
+   * styling of list items.
+   */
+  #user-login-form ul /* OpenID creates a new ul above the login form's links. */
+    {margin-bottom: 0;} /* Position OpenID's ul next to the rest of the links. */
+
+  #user-login-form li.openid-link /* The "Log in using OpenID" links. */
+    {margin-top: 1em; margin-left: -20px;} /* Un-do some of the padding on the ul list. */
+
+  #user-login-form li.user-link {margin-top: 1em;} /* The "Cancel OpenID login" links. */
+
+  #user-login ul {margin: 1em 0; padding: 0;} /* ED: remove padding */
+
+  #user-login li.openid-link, /* The OpenID links on the /user form. */
+  #user-login li.user-link {margin-left: -2em;} /* Un-do all of the padding on the ul list. */
+
+/** Drupal admin tables **/
+  /* We overrode these styles in html-elements.css, but restore them for the
+   * forms on the site.
+   */
+  form tbody {border-top: 1px solid #ccc;}
+
+  form th {text-align: left; padding-right: 1em; border-bottom: 3px solid #ccc;}
+  form tbody th {border-bottom: 1px solid #ccc;}
+  form thead th {text-align: left; padding-right: 1em; border-bottom: 3px solid #ccc;}

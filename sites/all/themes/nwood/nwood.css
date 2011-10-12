@@ -1,0 +1,9 @@
+/* nwood CSS 9/15/2011 */
+
+/* inline module */
+.inline {
+/*    float: left;*/
+    display: inline;
+    margin: 0 1em 1em 0;
+    padding: 4px 4px;
+  }

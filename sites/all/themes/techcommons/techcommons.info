@@ -1,0 +1,62 @@
+; $Id$
+
+name        = Tech Commons
+description = Tech Commons Theme for UC Berkeley
+
+screenshot = screenshot.png
+core       = 6.x
+base theme = zen
+
+stylesheets[all][]   = layout-fixed.css
+stylesheets[all][]   = html-elements.css
+stylesheets[all][]   = techcommons.css
+stylesheets[print][] = print.css
+
+; stylesheets[all][] = tabs.css
+; stylesheets[all][] = messages.css
+; stylesheets[all][] = block-editing.css
+; stylesheets[all][] = wireframes.css
+
+; Remove base theme css
+stylesheets[all][]   = zen.css
+
+; Set the conditional stylesheets that are processed by IE (primarly for 6 or earlier).
+conditional-stylesheets[if IE][all][] = ie.css
+
+; Optionally add some jquery scripts to your theme.
+; scripts[] = script.js
+scripts[] = jquery-custom.js
+
+regions[left]           = left sidebar
+regions[right]          = right sidebar
+regions[content_top]    = content top
+regions[content_bottom] = content bottom
+regions[header]         = header
+regions[footer]         = footer
+regions[closure_region] = closure
+
+; Features (See the Drupal 6 Theme Guide for more info http://drupal.org/node/171205#features)
+features[] = logo
+features[] = name
+features[] = slogan
+features[] = mission
+features[] = node_user_picture
+features[] = comment_user_picture
+features[] = search
+features[] = favicon
+features[] = primary_links
+features[] = secondary_links
+
+; Set the default settings to be used in theme-settings.php
+settings[zen_block_editing]        = 1
+settings[zen_breadcrumb]           = yes
+settings[zen_breadcrumb_separator] = ' › '
+settings[zen_breadcrumb_home]      = 1
+settings[zen_breadcrumb_trailing]  = 1
+settings[zen_breadcrumb_title]     = 0
+settings[zen_rebuild_registry]     = 1
+settings[zen_wireframes]           = 0
+settings[techcommons_title_effect] = TRUE
+
+; Plugins
+plugins[vud][widgets] = widgets

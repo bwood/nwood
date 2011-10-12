@@ -1,0 +1,45 @@
+# Drupal #
+##########
+sites/*/files/*
+files/*
+sites/nwood.localhost/*
+sites/nwood.org/settings.php
+
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+
+# OS generated files #
+######################
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+._*
+*~
+
+# Eclipse files #
+#################
+.buildpath
+.project
+.settings/*
+dummy.php
+
+# Devel themer files #
+#################
+sites/all/modules/devel_themer
+
+# Other files #
+#################

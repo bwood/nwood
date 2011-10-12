@@ -1,0 +1,115 @@
+/* $Id $ */
+
+/* techcommons - layout-liquid.css (Drupal 6) - 6/7/11 */
+/* Only include overrides here. All other CSS definitions belong in subtheme.css */
+/* ED = edited */
+
+/** body **/
+  body {}
+  #page, #closure-blocks {min-width: 960px;} /* Don't allow the browser to make the site unreadable. */
+  #page-inner {}
+
+  #navigation-top, #navigation {
+    position: absolute; /* Take the named anchors out of the doc flow    */
+    left: -10000px;     /* and prevent any anchor styles from appearing. */
+  }
+
+  /* ED: Remove skip-to-nav - combined with skip-to-main */
+
+/** header **/
+  #header {}
+  #header-inner {}
+  #logo-title {}
+  #logo {/*float: left;*/} /* ED: removed */
+  #site-name {}
+  #site-slogan {}
+  #header-blocks {clear: both;} /* Clear the logo */
+  
+/** main (container for everything else) **/
+  #main {position: relative;}
+  #main-inner {position: relative;}
+
+/** content **/
+  #content {float: left; width: 100%; margin-left: 0;
+    margin-right: -100%; /* Negative value of #content's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #content-inner. */
+  }
+  #content-inner, .no-sidebars #content-inner {margin: 0; padding: 0;}
+  .sidebar-left #content-inner  {
+    padding-left: 200px; /* The width + left margin of #sidebar-left. */
+    padding-right: 0;
+  }
+  .sidebar-right #content-inner {
+    padding-left: 0;
+    padding-right: 200px; /* The width + right margin of #sidebar-right. */
+  }
+  .two-sidebars #content-inner {
+    padding-left: 200px; /* The width + left margin of #sidebar-left. */
+    padding-right: 200px; /* The width + right margin of #sidebar-right. */
+  }
+  
+/** navbar **/ /*ED: remove navbar float and .with-navbar #sidebar-left and right */
+  #navbar {/*float: left;*/ width: 100%; margin-left: 0;
+    margin-right: -100%; /* Negative value of #navbar's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #navbar-inner. */
+    height: 3.3em; /** ED: Set this to the same value as the margin-top below. **/
+  }
+  .with-navbar #content /*, .with-navbar #sidebar-left, .with-navbar #sidebar-right */ {
+    margin-top: 3.3em; /** ED: Set this to the same value as the navbar height above. **/
+  }
+  #navbar-inner {}
+
+/** ED: Remove search-box, primary, secondary **/
+/* #search-box {width: 200px; margin-right: -200px; float: left;} */ /* Negative value of #search-box's width. */
+/* #primary {margin-left: 200px;} */ /* Width of search-box */
+/* #secondary {margin-left: 200px;} */ /* Width of search-box */
+
+  #navbar ul {margin: 0; padding: 0; text-align: left;}
+
+  #navbar li /* A simple method to get navbar links to appear in one line. */ {
+    float: left; padding: 0; /* ED: padding */
+  }
+
+  /* There are many methods to get navbar links to appear in one line.
+   * Here's an alternate method: */
+  /*
+  #navbar li {display: inline; padding: 0 10px 0 0;}
+  */
+
+/** sidebar-left **/
+  #sidebar-left {float: left; width: 200px; margin-left: 0;
+    margin-right: -200px; /* Negative value of #sidebar-left's width + left margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-left-inner. */
+  }
+  #sidebar-left-inner {margin: 0; padding: 0;} /*ED: remove margin */
+
+/** sidebar-right **/
+  #sidebar-right {float: right; width: 200px; margin-right: 0;
+    margin-left: -200px; /* Negative value of #sidebar-right's width + right margin. */
+    padding: 0; /* DO NOT CHANGE. Add padding or margin to #sidebar-right-inner. */
+  }
+  #sidebar-right-inner {margin: 0; padding: 0;} /*ED: remove margin */
+
+/** footer **/
+  #footer {}
+  #footer-inner {}
+
+/** closure **/
+  #closure-blocks {} /* See also the #page declaration above that this div shares. */
+
+/** Prevent overflowing content **/
+  #header, #content, #navbar, #sidebar-left, #sidebar-right, #footer, #closure-blocks {
+    overflow: visible; word-wrap: break-word; /* A very nice CSS3 property */
+  }
+  /* #navbar {overflow: hidden;}*/ /*ED: Remove */ /* May need to be removed if using a dynamic drop-down menu */
+
+  /* If a div.clear-block doesn't have any content after it and its bottom edge
+     touches the bottom of the viewport, Firefox and Safari will mistakenly
+     place several pixels worth of space between the bottom of the div and the
+     bottom of the viewport. Uncomment this CSS property to fix this.
+     Note: with some over-large content, this property might cause scrollbars
+     to appear on the #page div.
+  */
+  /*
+  #page {overflow-y: hidden;}
+  */
